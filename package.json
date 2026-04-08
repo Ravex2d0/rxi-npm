@@ -1,6 +1,6 @@
 {
   "name": "@ravex2d0/rxi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight JavaScript library for decoding .rxi image files with optional resizing and metadata reading",
   "main": "index.js",
   "type": "module",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ravex2d0/rxi.git"
+    "url": "https://github.com/ravex2d0/rxi-npm.git"
   },
   "bugs": {
     "url": "mailto:raffasyawira1@gmail.com"
