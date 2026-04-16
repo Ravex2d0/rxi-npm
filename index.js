@@ -26,7 +26,7 @@ async function inflateData(uint8) {
   return new Uint8Array(await new Response(ds.readable).arrayBuffer());
 }
 
-export default const RXI = {
+const RXI = {
   use: async function({ src, target, width = null, height = null }) {
     const response = await fetch(src);
     const buffer = await response.arrayBuffer();
@@ -224,19 +224,15 @@ export default const RXI = {
       pointer += 4;
 
       const commentLength = byte[pointer++];
-
       const commentBytes = byte.slice(pointer, pointer + commentLength);
       comment = new TextDecoder().decode(commentBytes);
       pointer += commentLength;
 
-      const timestamp =
-        (byte[pointer]     * 16777216) +
-        (byte[pointer + 1] << 16)      +
-        (byte[pointer + 2] << 8)       +
-        byte[pointer + 3];
-      pointer += 4;
+      const day = byte[pointer++];
+      const month = byte[pointer++];
+      const year = (byte[pointer++] << 8) | byte[pointer++];
 
-      date = new Date(timestamp * 1000);
+      date = new Date(year, month - 1, day);
     }
 
     pointer += 3;
@@ -256,3 +252,5 @@ export default const RXI = {
     };
   }
 }
+
+export default RXI;
