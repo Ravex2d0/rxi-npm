@@ -5,8 +5,7 @@ A lightweight JavaScript library for decoding `.rxi` image files with optional r
 
 ## Installation
 ```bash
-npm install rxi
-```
+npm install rxi                          ```
 
 ---
 
