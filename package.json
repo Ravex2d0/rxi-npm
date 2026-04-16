@@ -1,6 +1,6 @@
 {
   "name": "@ravex2d0/rxi",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "description": "A lightweight JavaScript library for decoding .rxi image files with optional resizing and metadata reading",
   "main": "index.js",
   "type": "module",
