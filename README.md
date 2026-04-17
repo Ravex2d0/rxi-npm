@@ -37,6 +37,7 @@ console.log(info);
 Output example:
 ```
 {
+  "version": "2.0.0",
   "width": 1280,
   "height": 1280,
   "mode": 2,
